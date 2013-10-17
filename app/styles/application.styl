@@ -3,18 +3,18 @@
 @import 'nib'
 
 $font-family = Slackey
-$hover-color = #f4f0c3
+$hover-color = yellow
 $text-shadow = #5f6359
 
 body
   padding-top: 72px
-  background-color: #86988b
+  background-color: #24586f
 
 header
   font-family: $font-family
 
   .navbar
-    background: #90425c
+    background: #df7875
     padding: 10px 0
     border-bottom: 2px solid #4b4d45
 
@@ -33,28 +33,23 @@ header
       color: $hover-color
 
 .masthead
-  background: #3a859f url("../img/noise.png") top left repeat
+  background: #1d458b url("../img/noise.png") top left repeat
   text-align: center
 
   h1
     font-family: $font-family
-    font-size: 54px
+    font-size: 82px
     color: #fff
-    padding: 10px 0
     text-shadow: 2px 2px $text-shadow
 
     strong
       color: $hover-color
 
   h2
-    color: #245060
+    color: #fff
     font-weight: 100
     font-size: 28px
-    padding: 20px 0 10px
-    border-top: 2px solid #42a0ba
-    box-shadow: 0 -2px #276475
-    width: 60%
-    margin: 10px auto
+    margin-top: 10px
 
     a
       color: inherit
@@ -95,13 +90,6 @@ header
       width: 30%
       right: 5%
       bottom: -6%
-
-.masthead:after
-  position: absolute
-  content: url(../img/flower.png)
-  top: -50px
-  right: 10px
-  opacity: 0.5
 
 .features
   position: relative
