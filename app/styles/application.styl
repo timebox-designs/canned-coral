@@ -3,50 +3,58 @@
 @import 'nib'
 
 $font-family = Slackey
+$header-background-color = #df7875
+$masthead-background-color = #1d458b
+$features-background-color = #594b6e
+$footer-background-color = #3b2b54
+
+$body-color = #fff
+$text-color = #a496bb
 $hover-color = yellow
-$text-shadow = #5f6359
+$primary-shadow = #3b2b54
+$secondary-shadow = #584378
 
 body
   padding-top: 72px
-  background-color: #24586f
+  color: $body-color
 
 header
   font-family: $font-family
 
   .navbar
-    background: #df7875
+    background: $header-background-color
+    border-bottom: 2px solid $secondary-shadow
     padding: 10px 0
-    border-bottom: 2px solid #4b4d45
 
-    .navbar-brand
-      color: #fff
-      font-size: 22px
-      text-transform: uppercase
-      text-shadow: 2px 2px $text-shadow
-
-    .nav > li > a
-      color: #fff
-      font-size: 12px
+    .navbar-brand,
+    .navbar-nav > li > a
+      color: $body-color
 
     .navbar-brand:hover,
-    .nav > li > a:hover
+    .navbar-nav > li > a:hover
       color: $hover-color
 
+    .navbar-brand
+      font-size: 22px
+      text-transform: uppercase
+      text-shadow: 2px 2px $secondary-shadow
+
+    .navbar-nav > li > a
+      font-size: 14px
+
 .masthead
-  background: #1d458b url("../img/noise.png") top left repeat
+  background: $masthead-background-color url("../img/noise.png") top left repeat
   text-align: center
 
   h1
     font-family: $font-family
-    font-size: 82px
-    color: #fff
-    text-shadow: 2px 2px $text-shadow
+    font-size: 72px
+    text-shadow: 2px 2px $secondary-shadow
 
     strong
       color: $hover-color
 
   h2
-    color: #fff
     font-weight: 100
     font-size: 28px
     margin-top: 10px
@@ -94,40 +102,49 @@ header
 .features
   position: relative
   z-index: 2
+  background-color: $features-background-color
+  box-shadow: 0px -10px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px $secondary-shadow
   padding: 30px 0
-  background: url("../img/stripped-bg.png")
-  box-shadow: 0px -10px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px #4b4d45
 
   .info-bullet
-    color: #fff
     text-align: center
     margin-bottom: 10px
 
     i
-      font-size: 90px
       display: block
+      font-size: 90px
       line-height: 102px
-      text-shadow: 1px 1px $text-shadow
 
     h5
-      color: #3a859f
+      font-family: $font-family
       font-size: 22px
       text-transform: uppercase
-      text-shadow: 1px 1px $text-shadow
       margin-bottom: 5px
       padding-bottom: 10px
-      font-family: $font-family
+
+    i, h5
+      text-shadow: 2px 2px $primary-shadow
+
+  p
+    color: $text-color
 
 footer
-  padding-top: 30px
   font-family: $font-family
-  height: 200px
+  background-color: $footer-background-color
+  padding: 30px 0
 
-  a
-    color: #b7c4be
-    font-size: 18px
-    margin-right: 15px
+  .thumbnail
+    float: left
+    width: 20%
+    margin: 2px 2px 10px
 
-  a:hover
-    color: #fff
-    text-decoration: none
+  .brand
+    text-align: center
+
+    > a
+      color: $text-color
+      font-size: 18px
+
+    > a:hover
+      color: $hover-color
+      text-decoration: none

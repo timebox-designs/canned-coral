@@ -17,6 +17,8 @@
         "test": "brunch test"
     },
     "dependencies": {
+        "http-proxy": "0.10.x",
+        "connect": "2.9.x",
         "javascript-brunch": "1.7.x",
         "css-brunch": "1.7.x",
         "stylus-brunch": "1.7.x",
