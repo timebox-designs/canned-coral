@@ -35,6 +35,7 @@ exports.config = {
         }
     },
     server: {
+        path: "server.js",
         port: 8080,
         run: true
     }

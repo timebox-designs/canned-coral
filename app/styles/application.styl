@@ -6,7 +6,7 @@ $font-family = Slackey
 $header-background-color = #df7875
 $masthead-background-color = #1d458b
 $features-background-color = #594b6e
-$footer-background-color = #3b2b54
+$background-color = #3b2b54
 
 $body-color = #fff
 $text-color = #a496bb
@@ -17,6 +17,7 @@ $secondary-shadow = #584378
 body
   padding-top: 72px
   color: $body-color
+  background-color: $background-color
 
 header
   font-family: $font-family
@@ -130,21 +131,16 @@ header
 
 footer
   font-family: $font-family
-  background-color: $footer-background-color
   padding: 30px 0
+  text-align: center
 
-  .thumbnail
-    float: left
-    width: 20%
-    margin: 2px 2px 10px
+  a
+    color: $body-color
+    font-size: 18px
 
-  .brand
-    text-align: center
-
-    > a
+    i
       color: $text-color
-      font-size: 18px
 
-    > a:hover
-      color: $hover-color
-      text-decoration: none
+  a:hover
+    color: $hover-color
+    text-decoration: none
