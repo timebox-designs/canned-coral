@@ -1,9 +1,11 @@
 var Backbone = require("backbone"),
     View = require("./my-ip");
 
-// For demonstration purposes only. This simple model defines the URL path to a RESTFul endpoint made available
-// on freegeoip.net, which returns geolocation information related to IPs. See "server.js" for details on how
-// this route is handled.
+// For demonstration purposes only.
+// This simple model defines the URL path to a RESTFul endpoint made
+// available on freegeoip.net, which returns geolocation information
+// related to a given IP. See "server.js" for details on how this
+// route is handled.
 
 var Model = Backbone.Model.extend({
     url: "/json"

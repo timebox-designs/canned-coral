@@ -12,8 +12,10 @@ exports.startServer = function (port, path, callback) {
         .use(connect.logger("dev"))
         .use(connect.static(path))
 
-        // For demonstration purposes only. Route all incoming http requests starting on path "/json"
-        // to freegeoip.net. See the the default/index view on see how this route is called.
+        // For demonstration purposes only.
+        // Route all incoming http requests starting on path "/json" to
+        // freegeoip.net. See views/default/index for details on how
+        // this route is called.
 
         .use("/json", function (req, res) {
             req.url = req.originalUrl;
