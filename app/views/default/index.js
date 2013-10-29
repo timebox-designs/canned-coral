@@ -13,6 +13,7 @@ var Model = Backbone.Model.extend({
 
 var Layout = Backbone.Marionette.Layout.extend({
     template: require("./template"),
+    className: "layout",
 
     regions: {
         ip: "#my-ip"

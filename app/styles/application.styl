@@ -4,27 +4,42 @@
 
 $font-family = Slackey
 $header-background-color = #df7875
-$masthead-background-color = #1d458b
+$masthead-background-color = #00084c
 $features-background-color = #594b6e
-$background-color = #3b2b54
 
 $body-color = #fff
 $text-color = #a496bb
 $hover-color = yellow
-$primary-shadow = #3b2b54
-$secondary-shadow = #584378
+$shadow = #3b2b54
+
+*
+  margin: 0
+
+html, body, .layout
+  height: 100%
 
 body
-  padding-top: 72px
   color: $body-color
-  background-color: $background-color
+  background: $features-background-color url("../img/stripped-bg.png") top left repeat
+
+.wrap
+  padding-top: 72px
+  min-height: 100%
+  margin-bottom: -80px
+
+.wrap:after
+  content: ""
+  display: block
+
+footer, .wrap:after
+  height: 80px
 
 header
   font-family: $font-family
 
   .navbar
     background: $header-background-color
-    border-bottom: 2px solid $secondary-shadow
+    border-bottom: 2px solid $shadow
     padding: 10px 0
 
     .navbar-brand,
@@ -38,7 +53,7 @@ header
     .navbar-brand
       font-size: 22px
       text-transform: uppercase
-      text-shadow: 2px 2px $secondary-shadow
+      text-shadow: 2px 2px $shadow
 
     .navbar-nav > li > a
       font-size: 14px
@@ -50,7 +65,7 @@ header
   h1
     font-family: $font-family
     font-size: 72px
-    text-shadow: 2px 2px $secondary-shadow
+    text-shadow: 2px 2px $shadow
 
     strong
       color: $hover-color
@@ -104,7 +119,7 @@ header
   position: relative
   z-index: 2
   background-color: $features-background-color
-  box-shadow: 0px -10px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px $secondary-shadow
+  box-shadow: 0px -10px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px $shadow
   padding: 30px 0
 
   .info-bullet
@@ -124,7 +139,7 @@ header
       padding-bottom: 10px
 
     i, h5
-      text-shadow: 2px 2px $primary-shadow
+      text-shadow: 2px 2px $shadow
 
   p
     color: $text-color

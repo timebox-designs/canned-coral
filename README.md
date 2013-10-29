@@ -6,7 +6,8 @@
 
 ## Features
 A reverse proxy, implemented using [http-proxy](https://npmjs.org/package/http-proxy) and [connect](https://npmjs.org/package/connect),
-that enables you to route incoming http requests to different backend services. See "server.js" for details.
+that enables you to route incoming http requests to different backend services. Primarily meant for development environments where it is
+easier to take advantage of existing services while building new technology. See "server.js" for details.
 
 ### Languages
 * [JavaScript](http://www.codecademy.com/tracks/javascript)
@@ -100,6 +101,7 @@ var Model = Backbone.Model.extend({
 
 var Layout = Backbone.Marionette.Layout.extend({
     template: require("./template"),
+    className: "layout",
 
     regions: {
         ip: "#my-ip"
