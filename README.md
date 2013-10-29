@@ -6,7 +6,7 @@
 
 ## Features
 A reverse proxy, implemented using [http-proxy](https://npmjs.org/package/http-proxy) and [connect](https://npmjs.org/package/connect),
-that enables you to route incoming http requests to different backend services. Primarily meant for development environments where it is
+that enables you to route incoming http requests to different backend services. Primarily meant for development environments, making it
 easier to take advantage of existing services while building new technology. See "server.js" for details.
 
 ### Languages
